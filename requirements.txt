@@ -1,8 +1,8 @@
-streamlit==0.88.0
-praw==7.4.0
-vaderSentiment==3.3.2
-autocorrect==2.5.0
-google-api-python-client==2.24.0
+streamlit
+praw
+vaderSentiment
+autocorrect
+google-api-python-client
 python-dotenv
 display
 google-generativeai
