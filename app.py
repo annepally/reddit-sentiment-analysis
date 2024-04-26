@@ -108,7 +108,7 @@ def reddit_data_fetcher():
 
 # Main function to run the Streamlit app
 def main():
-    st.set_page_config(page_title="Q&A Demo")
+    st.set_page_config(page_title="Social Media Text Analysis")
     
     reddit_data_fetcher()  # Reddit Data Fetcher at the top
     
