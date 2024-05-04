@@ -109,41 +109,15 @@ def reddit_data_fetcher():
         else:
             st.write("Please enter at least one subreddit.")
 
-def code_information():
-    st.title("About the Code")
-    st.write("This Streamlit app performs various social media text analysis tasks.")
-    st.write("It includes features such as auto text correction, sentiment analysis on Reddit data, and auto text generation.")
-    st.write("The app uses Python libraries such as Pandas, PRAW (Python Reddit API Wrapper), NLTK (Natural Language Toolkit), and Streamlit.")
 
 # Main function to run the Streamlit app
 def main():
-    st.set_page_config(page_title="Social Media Text Analysis", page_icon=":speech_balloon:")
 
-    # Custom CSS for styling
-    st.markdown(
-        """
-        <style>
-        .full-width {
-            width: 100%;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
 
     st.title("Social Media Text Analysis")
-
-    # Sidebar navigation
-    st.sidebar.title("Navigation")
-    if st.sidebar.button("Home"):
-        code_information()
-    if st.sidebar.button("Reddit Data Fetcher"):
         reddit_data_fetcher()
-    if st.sidebar.button("Auto Text Correction"):
         auto_text_correction()
-    if st.sidebar.button("Reddit Sentiment Analysis"):
         reddit_sentiment_analysis()
-    if st.sidebar.button("Auto Text Generation"):
         auto_text_generation()
 
 # Run the app
