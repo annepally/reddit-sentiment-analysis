@@ -112,13 +112,22 @@ def reddit_data_fetcher():
 
 # Main function to run the Streamlit app
 def main():
+    st.set_page_config(page_title="Social Media Text Analysis", page_icon=":speech_balloon:")
+
 
 
     st.title("Social Media Text Analysis")
-        reddit_data_fetcher()
-        auto_text_correction()
-        reddit_sentiment_analysis()
-        auto_text_generation()
+
+    # Sidebar navigation
+    st.sidebar.title("Navigation")
+   
+    reddit_data_fetcher()
+
+    auto_text_correction()
+    
+    reddit_sentiment_analysis()
+    
+    auto_text_generation()
 
 # Run the app
 if __name__ == "__main__":
