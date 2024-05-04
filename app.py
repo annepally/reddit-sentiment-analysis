@@ -11,10 +11,8 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-analyzer = load('analyzer.joblib')
-# Load the TF-IDF vectorizer
-svm_model = load('svm_model.joblib')
-vectorizer = load('vectorizer.joblib')
+analyzer = SentimentIntensityAnalyzer()
+
 
 # Initialize Reddit API client
 reddit = praw.Reddit(client_id='fpqm-JgqdYpiAmZodSh8Pw',
