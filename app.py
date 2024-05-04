@@ -116,8 +116,6 @@ def main():
 
     st.title("Social Media Text Analysis")
 
-    # Sidebar navigation
-    st.sidebar.title("Navigation")
    
     reddit_data_fetcher()
 
