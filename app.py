@@ -11,14 +11,17 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+analyzer = load('analyzer.joblib')
+# Load the TF-IDF vectorizer
+svm_model = load('svm_model.joblib')
+vectorizer = load('vectorizer.joblib')
+
 # Initialize Reddit API client
 reddit = praw.Reddit(client_id='fpqm-JgqdYpiAmZodSh8Pw',
                      client_secret='LCrn_D_tPMfnl_uj3pxVSXz_gWjjZw',
                      redirect_uri="http://localhost:8080",
                      user_agent='gojoinfinity1')
 
-# Load VADER Sentiment Analyzer
-analyzer = SentimentIntensityAnalyzer()
 
 # Configure genai
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
