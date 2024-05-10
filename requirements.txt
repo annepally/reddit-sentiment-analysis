@@ -7,5 +7,3 @@ python-dotenv
 display
 google-generativeai
 pandas
-joblib
-vectorizer
